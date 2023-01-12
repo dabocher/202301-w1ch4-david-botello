@@ -1,11 +1,51 @@
+@import url("/node_modules/@fontsource/nunito/400.css");
+@import url("/node_modules/@fontsource/nunito/800.css");
+
+:root {
+  --fontFamily-nunito: "Nunito", sans-serif;
+  --fontWeight-nunito-regular: 400;
+  --fontWeight-nunito-extrabold: 800;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
   margin: 0;
+  font-family: var(--fontFamily-nunito);
 }
 
-.page-title {
+.first-look {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first-look__page-title {
+  display: block;
+  text-align: center;
   color: #ed6436;
+  font-weight: var(--fontWeight-nunito-extrabold);
+}
+
+.first-look__button {
+  display: block;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+picture {
+}
+
+img {
+  border-radius: 10px;
 }
