@@ -5,47 +5,118 @@
   --fontFamily-nunito: "Nunito", sans-serif;
   --fontWeight-nunito-regular: 400;
   --fontWeight-nunito-extrabold: 800;
+  --color-accent: #ed6436;
+  --color-grey-dark: #333;
+  --color-white: #eee;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 1rem;
   margin: 0;
   font-family: var(--fontFamily-nunito);
+  color: var(--color-grey-dark);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .first-look {
+  margin: 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 4rem;
 }
 
 .first-look__page-title {
   display: block;
   text-align: center;
-  color: #ed6436;
+  font-size: 2.2rem;
+  color: var(--color-accent);
   font-weight: var(--fontWeight-nunito-extrabold);
 }
 
+.firts-look__heading-primary {
+  font-size: 6rem;
+  margin: 0;
+}
 .first-look__button {
   display: block;
   text-align: center;
+  border: none;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  padding: 1.6rem 3rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: inherit;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
 }
 
+.first-look__button:hover {
+  background: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.section-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4rem;
+  margin-bottom: 1rem;
+}
 .images {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-picture {
+  position: relative;
 }
 
-img {
-  border-radius: 10px;
+.images__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.images__image {
+  border-radius: 20px;
+}
+
+.images__caption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.images__caption-text-capital {
+  position: absolute;
+  bottom: 17%;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-white);
+}
+.images__caption-text {
+  position: absolute;
+  bottom: 6%;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+.color-black {
+  color: var(--color-grey-dark);
 }
