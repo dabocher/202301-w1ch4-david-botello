@@ -74,9 +74,10 @@ body {
 
 .section-images {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  row-gap: 4rem;
+  gap: 4rem;
   margin-bottom: 1rem;
 }
 .images {
